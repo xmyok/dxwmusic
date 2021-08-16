@@ -7,12 +7,16 @@ import Ktv from '../views/Ktv.vue'
 import Medetails from '../views/Medetails.vue'
 import Mrtj from '../views/Index/Mrtj.vue'
 import Phb from '../views/Index/Phb.vue'
-import Player from '../views/Player.vue'
 import Wdxx from '../views/Me/Wdxx.vue'
 import Fsqk from '../views/Me/Wdxx/Fs.vue'
 import Pl from '../views/Me/Wdxx/Pl.vue'
 import At from '../views/Me/Wdxx/At.vue'
 import Tz from '../views/Me/Wdxx/Tz.vue'
+import Login from '../views/login/Login.vue'
+import Sjhmdl from '../views/login/Sjhmdl.vue'
+import Gddetails from '../views/GD/Gddetails.vue'
+import Gdpinglun from '../views/GD/gdpinglun.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -20,6 +24,29 @@ const routes = [
     path: '/',
     name: 'Index',
     component: Index,
+    meta:{
+      showTab:true
+    }
+  },
+  {
+    path:'/gddetails',
+    name:'Gddetails',
+    component:Gddetails  
+  },
+  {
+    path:'/gdpinglun',
+    name:'gdpinglun',
+    component:Gdpinglun
+  },
+  {
+    path:'/login',
+    name:'Login',
+    component:Login
+  },
+  {
+    path:'/sjhmdl',
+    name:'Sjhmdl',
+    component:Sjhmdl,
   },
   {
     path:'/mrtj',
@@ -34,12 +61,18 @@ const routes = [
   {
     path:'/bk',
     name:'Bk',
-    component:Bk,  
+    component:Bk,
+    meta:{
+      showTab:true
+    }  
   },
   {
     path:'/me',
     name:'Me',
     component:Me,
+    meta:{
+      showTab:true
+    }
   },
   {
     path:'/wdxx',
@@ -69,17 +102,15 @@ const routes = [
   {
     path:'/ktv',
     name:'Ktv',
-    component:Ktv
+    component:Ktv,
+    meta:{
+      showTab:true
+    }
   },
   {
     path:'/medetails',
     name:'Medetails',
     component:Medetails,
-  },
-  {
-    path:'/player',
-    name:'player',
-    component:Player,
   },
   {
     path: '/about',

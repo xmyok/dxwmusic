@@ -17,9 +17,21 @@ import { Tab, Tabs } from 'vant';
 import { Slider } from 'vant';
 import { Uploader } from 'vant';
 import { Empty } from 'vant';
+import { Dialog } from 'vant'
+import { Field } from 'vant';
+import { List } from 'vant';
+import { Sticky } from 'vant';
+import { Circle } from 'vant';
+
+
 
 import 'vant/lib/index.css';
 
+Vue.use(Circle)
+Vue.use(Sticky);
+Vue.use(List);
+Vue.use(Field);
+Vue.use(Dialog);
 Vue.use(Empty);
 Vue.use(Uploader);
 Vue.use(Slider);
@@ -40,8 +52,11 @@ Vue.use(Badge);
 Vue.use(Icon)
 Vue.use(Button);
 Vue.use(Popup)
+
 Vue.config.productionTip = false
 
+import {request} from "./network/request"
+Vue.prototype.$request=request
 new Vue({
   router,
   store,
